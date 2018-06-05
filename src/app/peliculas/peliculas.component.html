@@ -1,6 +1,6 @@
 <form id="formDetalle" class="example-form" #detalle="ngForm" (ngSubmit)="agregarDatos(detalle)">
 
-  <h3 class="first" style="margin-top: 30px">Ingresar Pelicula</h3>
+<h3 class="first" style="margin-top: 30px">Ingresar Pelicula</h3>
 
 
   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
@@ -11,13 +11,15 @@
 
     <input type="text" pInputText placeholder="Año Lanzamiento" name="anioLanzamiento" [(ngModel)]="anioLanzamiento">
 
+    <input type="text" pInputText placeholder="Raiting" name="rating" [(ngModel)]="rating">
+
     <input type="text" pInputText placeholder="Actores" name="actoresPrincipales" [(ngModel)]="actoresPrincipales">
 
     <input type="text" pInputText placeholder="Sinopsis" name="sinopsis" [(ngModel)]="sinopsis">
 
     <input type="text" pInputText placeholder="Actor ID" name="actorId" [(ngModel)]="actorId">
 
-    <button id="button" type="sumbit" style="width: 50%; margin-left: 25%; margin-top: 10px">Guardar</button>
+   <button id="button" type="sumbit" style="width: 50%; margin-left: 25%; margin-top: 10px">Guardar</button>
 
   </div>
 

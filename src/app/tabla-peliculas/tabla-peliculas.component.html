@@ -1,27 +1,26 @@
 <div id="tablaDetalle" style="padding-bottom: 20px">
-  <h3 class="first" style="padding-top: 20px">Peliculas</h3>
   <p-table [value]="datosTabla" *ngFor="let datos of datosTabla">
     <ng-template pTemplate="header">
+      <h3 style="padding-top: 20px; width: 400px">{{datos[0].nombres}}</h3>
       <tr>
         <th style="text-align: center">#</th>
         <th>Nombre</th>
         <th>Año</th>
         <th>Raiting</th>
-        <th>Acotres rincipales</th>
+        <th>Acoters Principales</th>
         <th>Sinopsis</th>
-        <th>Actor</th>
+        <th>Actor ID</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-car>
-      <tr *ngFor="let datosTabla of datos[0].peliculas; let i = index">
+    <ng-template pTemplate="body" let-car >
+      <tr  *ngFor="let datosTabla of datos[0].peliculas; let i = index">
         <th>{{i+1}}</th>
-        <td>{{datos[0].nombre}}</td>
-        <td>{{datos[0].anioLanzamiento}}</td>
-        <td>{{datos[0].rating}}</td>
-        <td>{{datos[0].actoresPrincipales}}</td>
-        <td>{{datos[0].sinopsis}}</td>
-        <td>{{datosTabla[0].nombres}}</td>
-        <!--<td *ngFor="let datosTabla of datos[0].peliculas">{{datosTabla.nombre}}</td>-->
+        <td >{{datosTabla.nombre}}</td>
+        <td >{{datosTabla.anioLanzamiento}}</td>
+        <td >{{datosTabla.rating}}</td>
+        <td >{{datosTabla.actoresPrincipales}}</td>
+        <td >{{datosTabla.sinopsis}}</td>
+        <td >{{datosTabla.actorId}}</td>
       </tr>
     </ng-template>
   </p-table>

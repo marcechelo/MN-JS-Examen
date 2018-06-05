@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActorService} from '../actor/actor.service';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-peliculas',
@@ -10,7 +11,7 @@ export class PeliculasComponent implements OnInit {
 
   arregloPeliculas = [];
   arregloTabla = [];
-  checked = false;
+  formDetalle: FormGroup;
 
   constructor(private data: ActorService) {
 
@@ -19,6 +20,19 @@ export class PeliculasComponent implements OnInit {
   ngOnInit() {
     this.data.mensajeActual2.subscribe(mensaje => this.arregloPeliculas = mensaje);
     this.arregloTabla = this.arregloPeliculas;
+    this.createForm();
+  }
+
+  private createForm() {
+    this.formDetalle = new FormGroup({
+      identificadorPelicula: new FormControl('', Validators.required),
+      nombre: new FormControl('', Validators.required),
+      anioLanzamiento: new FormControl('', Validators.required),
+      rating: new FormControl('', Validators.required),
+      actoresPrincipales: new FormControl('', Validators.required),
+      sinopsis: new FormControl('', Validators.required),
+      actorId: new FormControl('', Validators.required)
+    });
   }
 
   agregarDatos(Data) {
@@ -51,6 +65,7 @@ export class PeliculasComponent implements OnInit {
   enviarDatos() {
     console.log(this.arregloTabla);
     this.data.cambiarMensaje3(this.arregloTabla);
+    this.arregloTabla = []
     this.mostrarTablaDetalle();
   }
 

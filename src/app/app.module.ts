@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
-import {MatButtonModule, MatRadioModule, MatSelectModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule, MatSelectModule} from '@angular/material';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { PeliculasComponent } from './peliculas/peliculas.component';
 import {CheckboxModule} from 'primeng/primeng';
@@ -38,7 +38,10 @@ import {TableModule} from 'primeng/table';
     CardModule,
     ButtonModule,
     CheckboxModule,
-    TableModule
+    TableModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
