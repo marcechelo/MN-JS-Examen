@@ -1,6 +1,6 @@
 <div id="tablaDetalle" style="padding-bottom: 20px">
   <h3 class="first" style="padding-top: 20px">Peliculas</h3>
-  <p-table [value]="datosTabla">
+  <p-table [value]="datosTabla" *ngFor="let datos of datosTabla">
     <ng-template pTemplate="header">
       <tr>
         <th style="text-align: center">#</th>
