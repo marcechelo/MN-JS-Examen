@@ -1,0 +1,42 @@
+<h3 class="first" align="center" style="margin-top: 30px">Ingresar Actor</h3>
+<h3 class="first" align="center" style="margin-top: 30px"></h3>
+
+<form id="Cabecera" class="example-form" #cabecera="ngForm" (ngSubmit)="agregarDatos(cabecera)" xmlns="">
+
+
+  <mat-form-field>
+    <input type="text" matInput placeholder="Nombres" name="nombres" [(ngModel)]="nombres">
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input type="text" matInput placeholder="Apellido" name="apellidos" [(ngModel)]="apellidos">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input type="text" matInput placeholder="Fecha de Nacimiento" name="fechaNacimiento" [(ngModel)]="fechaNacimiento">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input type="text" matInput placeholder="Numero de Peiculas" name="numeroPeliculas" [(ngModel)]="numeroPeliculas">
+  </mat-form-field>
+
+  <mat-radio-group name="retirado" style="margin-top: 5px" [(ngModel)]="retirado">
+    <mat-label>Retirad@: </mat-label>
+    <mat-radio-button class="example-margin" style="padding-left: 20px" [value]=true>Si</mat-radio-button>
+    <mat-radio-button class="example-margin" style="padding-left: 20px" [value]=false>No</mat-radio-button>
+  </mat-radio-group>
+  <!--<div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+    <div class="ui-inputgroup">
+      <label style="padding-right: 10px">Retirado</label>
+      <p-checkbox name="activo" [(ngModel)]="retirado" binary="true"></p-checkbox>
+    </div>-->
+
+  <button mat-stroked-button color="primary" style="width: 50%; margin-left: 25%; margin-top: 10px">Guardar</button>
+
+</form>
+
+<!--<button onclick="document.getElementById('Cabecera').reset()" mat-stroked-button color="primary" style="margin-top: 5px; margin-left: 25%; width: 50%">Limpiar </button>-->
+
+
+

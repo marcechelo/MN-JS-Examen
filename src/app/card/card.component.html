@@ -1,0 +1,20 @@
+<div id="tarjeta">
+  <p-card class="card" title="Tarjeta Actor" [style]="{width: '100%'}" style="margin-left: 20px; margin-top: 30px" *ngFor="let info of tarjeta">
+    <div >
+      <label style="font-weight: bold">Nombres:</label>
+      {{info.nombres}}
+      <br>
+      <label style="font-weight: bold">Apellidos:</label>
+      {{info.apellidos}}
+      <br>
+      <label style="font-weight: bold">Fecha de nacimiento:</label>
+      {{info.fechaNacimiento}}
+      <br>
+      <label style="font-weight: bold">Numero de Peliculas:</label>
+      {{info.numeroPeliculas}}
+      <br>
+      <label style="font-weight: bold">Retirado:</label>
+      {{info.retirado}}
+    </div>
+  </p-card>
+</div>

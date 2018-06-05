@@ -1,0 +1,12 @@
+card{
+  width: 100px;
+  border-style: solid;
+}
+
+.card-title{
+  font-weight: bold;
+}
+
+.block-link {
+  display: block;
+}
