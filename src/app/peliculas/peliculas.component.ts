@@ -9,17 +9,17 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class PeliculasComponent implements OnInit {
 
-  arregloPeliculas = [];
-  arregloTabla = [];
   formDetalle: FormGroup;
+  arregloActores = [];
+  arregloTabla = [];
 
   constructor(private data: ActorService) {
 
   }
 
   ngOnInit() {
-    this.data.mensajeActual2.subscribe(mensaje => this.arregloPeliculas = mensaje);
-    this.arregloTabla = this.arregloPeliculas;
+    this.data.mensajeActual2.subscribe(mensaje => this.arregloActores = mensaje);
+    // this.arregloTabla = this.arregloActores;
     this.createForm();
   }
 
@@ -37,27 +37,29 @@ export class PeliculasComponent implements OnInit {
 
   agregarDatos(Data) {
 
-    this.arregloPeliculas.push(
+    this.arregloActores.push(
       {
-        'nombres': this.arregloPeliculas[0].nombres,
-        'apellidos': this.arregloPeliculas[0].apellidos,
-        'fechaNacimeinto': this.arregloPeliculas[0].fechaNacimeinto,
-        'numeroPeliculas': this.arregloPeliculas[0].numeroPeliculas,
-        'retirado': this.arregloPeliculas[0].retirado,
-
-        'peliculas': [{
-          'identificadorPelicula': Data.value.identificadorPelicula,
-          'nombre': Data.value.nombre,
-          'anioLanzamiento': Data.value.anioLanzamiento,
-          'rating': Data.value.rating,
-          'actoresPrincipales': Data.value.actoresPrincipales,
-          'sinopsis': Data.value.sinopsis,
-          'actorId': Data.value.actorId,
-        }]
+        'nombres': this.arregloActores[0].nombres,
+        'apellidos': this.arregloActores[0].apellidos,
+        'fechaNacimeinto': this.arregloActores[0].fechaNacimeinto,
+        'numeroPeliculas': this.arregloActores[0].numeroPeliculas,
+        'retirado': this.arregloActores[0].retirado,
+        'peliculas': this.arregloActores[0].peliculas,
       });
 
-    this.arregloPeliculas.splice(0, 1);
-    this.arregloTabla.push(this.arregloPeliculas);
+    this.arregloActores[0].peliculas.push(
+      {
+        'identificadorPelicula': Data.value.identificadorPelicula,
+        'nombre': Data.value.nombre,
+        'anioLanzamiento': Data.value.anioLanzamiento,
+        'rating': Data.value.rating,
+        'actoresPrincipales': Data.value.actoresPrincipales,
+        'sinopsis': Data.value.sinopsis,
+        'actorId': Data.value.actorId,
+      });
+
+    this.arregloActores.splice(0, 1);
+    this.arregloTabla.push(this.arregloActores);
     this.enviarDatos();
     this.resetForm();
   }
@@ -65,7 +67,7 @@ export class PeliculasComponent implements OnInit {
   enviarDatos() {
     console.log(this.arregloTabla);
     this.data.cambiarMensaje3(this.arregloTabla);
-    this.arregloTabla = []
+    this.arregloTabla = [];
     this.mostrarTablaDetalle();
   }
 
