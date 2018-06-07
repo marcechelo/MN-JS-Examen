@@ -14,11 +14,13 @@
   </mat-form-field>
 
   <mat-form-field>
-    <input type="text" matInput placeholder="Fecha de Nacimiento" name="fechaNacimiento" [(ngModel)]="fechaNacimiento">
+    <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" name="fechaNacimiento" [(ngModel)]="fechaNacimiento">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 
   <mat-form-field>
-    <input type="text" matInput placeholder="Numero de Peiculas" name="numeroPeliculas" [(ngModel)]="numeroPeliculas">
+    <input type="number" matInput placeholder="Numero de Peiculas" name="numeroPeliculas" [(ngModel)]="numeroPeliculas">
   </mat-form-field>
 
   <mat-radio-group name="retirado" style="margin-top: 5px" [(ngModel)]="retirado">
