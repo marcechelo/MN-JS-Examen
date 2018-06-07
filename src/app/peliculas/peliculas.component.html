@@ -1,9 +1,6 @@
 <form id="formDetalle" class="example-form" #detalle="ngForm" (ngSubmit)="agregarDatos(detalle)">
   <h3 class="first" style="margin-top: 30px">Ingresar Pelicula</h3>
   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-
-    <h3 class="first" style="margin-top: 30px"></h3>
-
     <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
 
       <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
@@ -19,6 +16,11 @@
       <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
         <span class="ui-float-label"></span>
         <input id="anio" type="text" pInputText placeholder="Año" name="anioLanzamiento" [(ngModel)]="anioLanzamiento">
+      </div>
+
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input id="raiting" type="text" pInputText placeholder="Raiting" name="rating" [(ngModel)]="rating">
       </div>
 
       <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
