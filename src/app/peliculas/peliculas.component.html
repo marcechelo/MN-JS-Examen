@@ -1,85 +1,46 @@
 <form id="formDetalle" class="example-form" #detalle="ngForm" (ngSubmit)="agregarDatos(detalle)">
-
   <h3 class="first" style="margin-top: 30px">Ingresar Pelicula</h3>
-
-
   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
 
-        <h3 class="first" style="margin-top: 30px"></h3>
-        <span class="ui-float-label">
-    <input id="float-input" type="text" pInputText placeholder="" name="identificadorPelicula"
-           [(ngModel)]="identificadorPelicula">
-      <label for="float-input">Pelucla ID</label>
-    </span>
-
-        <h3 class="first" style="margin-top: 30px"></h3>
-        <span class="ui-float-label">
-    <input id="nombre" type="text" pInputText placeholder="" name="nombre" [(ngModel)]="nombre">
-      <label for="nombre">Nombre</label>
-    </span>
-
-
     <h3 class="first" style="margin-top: 30px"></h3>
-    <span class="ui-float-label">
-    <input id="anio" type="text" pInputText placeholder="" name="anioLanzamiento" [(ngModel)]="anioLanzamiento">
-      <label for="anio">Año Lanzamiento</label>
-    </span>
 
-    <h3 class="first" style="margin-top: 30px"></h3>
-    <span class="ui-float-label">
-    <input id="actores" type="text" pInputText placeholder="" name="actoresPrincipales"
-           [(ngModel)]="actoresPrincipales">
-      <label for="actores">Actores</label>
-    </span>
+    <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
 
-    <h3 class="first" style="margin-top: 30px"></h3>
-    <span class="ui-float-label">
-    <input id="sinopsis" type="text" pInputText placeholder="" name="sinopsis" [(ngModel)]="sinopsis">
-      <label for="sinopsis">Sinopsis</label>
-    </span>
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input type="text" pInputText placeholder="Pelicula Id" name="identificadorPelicula" [(ngModel)]="identificadorPelicula">
+      </div>
 
-    <h3 class="first" style="margin-top: 30px"></h3>
-    <span class="ui-float-label">
-    <input id="actorId" type="text" pInputText placeholder="" name="actorId" [(ngModel)]="actorId">
-      <label for="actorId">Actor ID</label>
-    </span>
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input type="text" pInputText placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+      </div>
+
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input id="anio" type="text" pInputText placeholder="Año" name="anioLanzamiento" [(ngModel)]="anioLanzamiento">
+      </div>
+
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input id="actores" type="text" pInputText placeholder="Actores" name="actoresPrincipales" [(ngModel)]="actoresPrincipales">
+      </div>
+
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input id="sinopsis" type="text" pInputText placeholder="Sinopsis" name="sinopsis" [(ngModel)]="sinopsis">
+      </div>
+
+      <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
+        <span class="ui-float-label"></span>
+        <input id="actorId" type="text" pInputText placeholder="Actor Id" name="actorId" [(ngModel)]="actorId">
+      </div>
+
+    </div>
 
     <button mat-stroked-button type="primary" style="width: 50%; margin-left: 25%; margin-top: 10px">Guardar</button>
 
   </div>
-
-
-  <!-- <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-     <div class="ui-inputgroup">
-       <input type="text" pInputText placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
-     </div>
-   </div>
-   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-     <div class="ui-inputgroup">
-       <input type="text" pInputText placeholder="Año Lanzaminento" name="anioLanzamiento" [(ngModel)]="anioLanzamiento">
-     </div>
-   </div>
-   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-     <div class="ui-inputgroup">
-       <input type="text" pInputText placeholder="Rating" name="rating" [(ngModel)]="rating">
-     </div>
-   </div>
-   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-     <div class="ui-inputgroup">
-       <input type="text" pInputText placeholder="Actoree Principales" name="actoresPrincipales" [(ngModel)]="actoresPrincipales">
-     </div>
-   </div>
-   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-     <div class="ui-inputgroup">
-       <input type="text" pInputText placeholder="Sinopsis" name="sinopsis" [(ngModel)]="sinopsis">
-     </div>
-   </div>
-   <div class="ui-g-6 ui-md-4" style="margin-right: 10px">
-     <div class="ui-inputgroup">
-       <input type="text" pInputText placeholder="Actor ID" name="actorId" [(ngModel)]="actorId">
-     </div>
-   </div>-->
-
 
 </form>
 

@@ -1,29 +1,9 @@
 <div class="row"  style="margin-left: 20px">
   <div class="col-sm-2" *ngFor="let info of mensaje; let indice = index" style="margin-right: 20px; margin-top: 20px">
-
-
-
       <p-card title="{{info.nombres}}" subtitle="{{info.apellidos}}" [style]="{width: '100%', height:' 100%' }" styleClass="ui-card-shadow">
-        <!--<p-header>
-          <img src="Card" src="https://cdn.flii.by/image/v4y505uo1sr.jpg">
-        </p-header>-->
-
         <p-footer>
           <button mat-button type="button" class="btn btn-primary" (click)="enviarDatos(indice)">Detalle</button>
         </p-footer>
       </p-card>
-
-      <!--
-      <div class="card" style="width: 100px;">
-      <div class="card-body">
-        <h5 class="card-title">{{info.nombres}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{info.apellidos}}</h6>
-        <button mat-button type="button" class="btn btn-primary" (click)="enviarDatos(indice)">Detalle</button>
-
-      </div>-->
-
-
-
   </div>
-
 </div>

@@ -1,5 +1,5 @@
 <div id="tarjeta">
-  <p-card class="card" title="Tarjeta Actor" style="margin-left: 20px; margin-top: 30px" *ngFor="let info of tarjeta">
+  <p-card class="card" title="Tarjeta Actor" [style]="{width: '100%'}" style="margin-left: 20px; margin-top: 30px" *ngFor="let info of tarjeta">
     <div class="div">
       <label style="font-weight: bold">Nombres:</label>
       {{info.nombres}}

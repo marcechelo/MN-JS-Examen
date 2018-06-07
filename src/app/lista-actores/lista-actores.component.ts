@@ -17,9 +17,9 @@ export class ListaActoresComponent implements OnInit {
     this.data.mensajeActual.subscribe(mensaje => this.mensaje = mensaje);
   }
 
-  enviarDatos(index) {
+  enviarDatos(indice) {
     this.actorCard = [];
-    this.actorCard.push(this.mensaje[index]);
+    this.actorCard.push(this.mensaje[indice]);
     this.data.cambiarMensaje2(this.actorCard);
     this.mostrarElementos();
   }
@@ -28,9 +28,6 @@ export class ListaActoresComponent implements OnInit {
 
     const mostrarFormDetalle = <HTMLFormElement>document.getElementById('formDetalle');
     mostrarFormDetalle.style.display = 'block';
-
-    const mostrarBotonLimpiarDetalle = <HTMLFormElement>document.getElementById('botonLimpiarDetalle');
-    mostrarBotonLimpiarDetalle.style.display = 'block';
 
     const mostrarTarjeta = <HTMLFormElement>document.getElementById('tarjeta');
     mostrarTarjeta.style.display = 'block';

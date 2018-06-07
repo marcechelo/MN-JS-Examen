@@ -20,22 +20,9 @@ export class PeliculasComponent implements OnInit {
   ngOnInit() {
     this.data.mensajeActual2.subscribe(mensaje => this.arregloActores = mensaje);
     // this.arregloTabla = this.arregloActores;
-    this.createForm();
   }
 
-  private createForm() {
-    this.formDetalle = new FormGroup({
-      identificadorPelicula: new FormControl('', Validators.required),
-      nombre: new FormControl('', Validators.required),
-      anioLanzamiento: new FormControl('', Validators.required),
-      rating: new FormControl('', Validators.required),
-      actoresPrincipales: new FormControl('', Validators.required),
-      sinopsis: new FormControl('', Validators.required),
-      actorId: new FormControl('', Validators.required)
-    });
-  }
-
-  agregarDatos(Data) {
+  agregarDatos(formData) {
 
     this.arregloActores.push(
       {
@@ -49,13 +36,13 @@ export class PeliculasComponent implements OnInit {
 
     this.arregloActores[0].peliculas.push(
       {
-        'identificadorPelicula': Data.value.identificadorPelicula,
-        'nombre': Data.value.nombre,
-        'anioLanzamiento': Data.value.anioLanzamiento,
-        'rating': Data.value.rating,
-        'actoresPrincipales': Data.value.actoresPrincipales,
-        'sinopsis': Data.value.sinopsis,
-        'actorId': Data.value.actorId,
+        'identificadorPelicula': formData.value.identificadorPelicula,
+        'nombre': formData.value.nombre,
+        'anioLanzamiento': formData.value.anioLanzamiento,
+        'rating': formData.value.rating,
+        'actoresPrincipales': formData.value.actoresPrincipales,
+        'sinopsis': formData.value.sinopsis,
+        'actorId': formData.value.actorId,
       });
 
     this.arregloActores.splice(0, 1);
