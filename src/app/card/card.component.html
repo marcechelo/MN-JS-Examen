@@ -1,19 +1,19 @@
 <div id="tarjeta">
-  <p-card class="card" title="Tarjeta Actor" [style]="{width: '100%'}" style="margin-left: 20px; margin-top: 30px" *ngFor="let info of tarjeta">
+  <p-card class="card" title="Actor" [style]="{width: '100%'}" styleClass="ui-card-shadow" style="margin-left: 20px; margin-top: 30px" *ngFor="let info of tarjeta">
     <div class="div">
-      <label style="font-weight: bold">Nombres:</label>
+      <label>Nombres:</label>
       {{info.nombres}}
       <br>
-      <label style="font-weight: bold">Apellidos:</label>
+      <label>Apellidos:</label>
       {{info.apellidos}}
       <br>
-      <label style="font-weight: bold">Fecha de nacimiento:</label>
+      <label>Fecha de nacimiento:</label>
       {{info.fechaNacimiento}}
       <br>
-      <label style="font-weight: bold">Numero de Peliculas:</label>
+      <label>Numero de Peliculas:</label>
       {{info.numeroPeliculas}}
       <br>
-      <label style="font-weight: bold">Retirado:</label>
+      <label>Retirado:</label>
       {{info.retirado}}
     </div>
   </p-card>
