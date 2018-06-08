@@ -1,7 +1,7 @@
 <div id="tablaDetalle" style="padding-bottom: 20px">
   <p-table [value]="datosTabla" *ngFor="let datos of datosTabla">
     <ng-template pTemplate="header">
-      <h3 style="padding-top: 20px; width: 400px">Actor {{datos[0].nombres}}</h3>
+      <h3 style="padding-top: 20px; width: 400px">Peliculas:  {{datos[0].nombres}} {{datos[0].apellidos}}</h3>
       <tr>
         <th style="text-align: center">#</th>
         <th>ID Pelicula</th>
