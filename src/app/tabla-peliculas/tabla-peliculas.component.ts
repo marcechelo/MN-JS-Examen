@@ -14,14 +14,4 @@ export class TablaPeliculasComponent implements OnInit {
   ngOnInit() {
     this.data.mensajeActual3.subscribe(mensaje => this.datosTabla = mensaje);
   }
-
-  cambiarBolean(estado) {
-
-    if (estado === true) {
-      return 'Si';
-    } else {
-      return 'No';
-    }
-
-  }
 }

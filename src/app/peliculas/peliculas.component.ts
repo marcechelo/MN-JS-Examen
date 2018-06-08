@@ -52,7 +52,6 @@ export class PeliculasComponent implements OnInit {
   }
 
   enviarDatos() {
-    console.log(this.arregloTabla);
     this.data.cambiarMensaje3(this.arregloTabla);
     this.arregloTabla = [];
     this.mostrarTablaDetalle();

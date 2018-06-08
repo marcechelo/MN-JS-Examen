@@ -26,6 +26,9 @@ export class ListaActoresComponent implements OnInit {
 
   mostrarElementos() {
 
+    const mostrarTabla = <HTMLFormElement>document.getElementById('tablaDetalle');
+    mostrarTabla.style.display = 'block';
+
     const mostrarFormDetalle = <HTMLFormElement>document.getElementById('formDetalle');
     mostrarFormDetalle.style.display = 'block';
 
