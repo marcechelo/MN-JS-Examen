@@ -2,7 +2,7 @@
   <div class="col-sm-2" *ngFor="let info of mensaje; let indice = index" style="margin-right: 20px; margin-top: 20px">
       <p-card title="{{info.nombres}}" subtitle="{{info.apellidos}}" [style]="{width: '100%', height:' 100%' }" styleClass="ui-card-shadow">
         <p-footer>
-          <button mat-button type="button" class="btn btn-primary" (click)="enviarDatos(indice)">Detalle</button>
+          <button mat-button type="button" class="btn btn-primary" (click)="enviarDatos(indice); actorArreglo(indice)">Detalle</button>
         </p-footer>
       </p-card>
   </div>

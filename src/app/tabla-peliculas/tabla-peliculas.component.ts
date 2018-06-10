@@ -9,9 +9,11 @@ import {ActorService} from '../actor/actor.service';
 export class TablaPeliculasComponent implements OnInit {
 
   datosTabla = [];
+  arreglo = [];
   constructor(private data: ActorService) { }
 
   ngOnInit() {
     this.data.mensajeActual3.subscribe(mensaje => this.datosTabla = mensaje);
+    this.arreglo = this.data.getArreglo();
   }
 }

@@ -12,6 +12,8 @@ export class PeliculasComponent implements OnInit {
   formDetalle: FormGroup;
   arregloActores = [];
   arregloTabla = [];
+  arregloPeliculas = [];
+  idpelicula = 0;
 
   constructor(private data: ActorService) {
 
@@ -19,13 +21,17 @@ export class PeliculasComponent implements OnInit {
 
   ngOnInit() {
     this.data.mensajeActual2.subscribe(mensaje => this.arregloActores = mensaje);
+    // this.idpelicula = this.arregloActores[0].id;
     // this.arregloTabla = this.arregloActores;
   }
 
   agregarDatos(formData) {
 
+    console.log(this.idpelicula = this.arregloActores[0].id);
+
     this.arregloActores.push(
       {
+        'id': this.arregloActores[0].id,
         'nombres': this.arregloActores[0].nombres,
         'apellidos': this.arregloActores[0].apellidos,
         'fechaNacimeinto': this.arregloActores[0].fechaNacimeinto,
@@ -53,6 +59,7 @@ export class PeliculasComponent implements OnInit {
 
   enviarDatos() {
     this.data.cambiarMensaje3(this.arregloTabla);
+    console.log(this.arregloTabla);
     this.arregloTabla = [];
     this.mostrarTablaDetalle();
   }

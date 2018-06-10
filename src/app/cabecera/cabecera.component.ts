@@ -10,8 +10,8 @@ export class CabeceraComponent implements OnInit {
 
   mensaje = [];
   arregloDatos = [];
+  id = 0;
   constructor(private data: ActorService) {}
-
 
 
   ngOnInit() {
@@ -27,6 +27,7 @@ export class CabeceraComponent implements OnInit {
   agregarDatos(formData) {
     this.arregloDatos.push(
       {
+        'id': this.id,
         'nombres': formData.value.nombres,
         'apellidos': formData.value.apellidos,
         'fechaNacimiento': formData.value.fechaNacimiento,
@@ -40,6 +41,8 @@ export class CabeceraComponent implements OnInit {
     this.resetForm();
 
     console.log(this.arregloDatos);
+
+    this.id ++;
   }
 
   mandarDatos() {
